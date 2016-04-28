@@ -1,4 +1,4 @@
-UnixAuth module
+SimpleSAMLphp UnixAuth module
 ================
 
 The simplesamlphp UnixAuth module provides method of authentication user against Unix server (supported IMAP and SSH authentication module).
@@ -6,11 +6,18 @@ The simplesamlphp UnixAuth module provides method of authentication user against
 After successful login it tries to find user email and returns it as 'mail' element.
 If Roundcube (webmail client) SQL database is available module can read user personal data from identity entry.
 
+Install module
+
+You can install the module with composer:
+
+composer require bilbolodz/simplesamlphp-module-unixauth:1.*
+
+
 To create a ImapAuth authentication source, open `config/authsources.php` in a text editor, and add an entry for the
 authentication source:
 
-	'imap_auth' => array(
-	    'imapauth:MyAuth',
+	'unix_auth' => array(
+	    'unixauth:MyAuth',
 	    'auth_mech' => 'imapd',
 		'ssh_hostname' => 'mazurek.man.lodz.pl',
 		'ssh_port' => '22',

@@ -1,7 +1,14 @@
 {
     "name": "bilbolodz/simplesamlphp-module-unixauth",
-    "description": "The UnixAuth module provides method of authentication user against Unix server.",
+    "description": "The SimpleSAMLphp UnixAuth module provides method of authentication user against Unix server.",
     "type": "simplesamlphp-module",
+     "authors": [
+        {
+            "name": "Piotr Goczal",
+            "email": "bilbo@lodz.pl",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "simplesamlphp/composer-module-installer": "~1.0",
     }

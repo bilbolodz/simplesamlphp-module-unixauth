@@ -2,8 +2,8 @@
 
 $config = array(
 
-	'imap_auth_mbox' => array(
-	    'imapauth:MyAuth',
+	'unix_auth_mbox' => array(
+	    'unixauth:MyAuth',
 		'auth_mech' => 'imapd',//imapd/ssh
 		'ssh_hostname' => 'mazurek.man.lodz.pl',
 		'ssh_port' => '22',
