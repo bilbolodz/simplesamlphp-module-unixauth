@@ -7,11 +7,16 @@ After successful login it tries to find user email and returns it as 'mail' elem
 If Roundcube (webmail client) SQL database is available module can read user personal data from identity entry.
 
 Install module
+---------------
 
 You can install the module with composer:
 
+```
 composer require bilbolodz/simplesamlphp-module-unixauth:1.*
+```
 
+Configuration
+-------------
 
 To create a ImapAuth authentication source, open `config/authsources.php` in a text editor, and add an entry for the
 authentication source:
