@@ -12,7 +12,7 @@ Install module
 You can install the module with composer:
 
 ```
-composer require bilbolodz/simplesamlphp-module-unixauth:1.*
+composer require bilbolodz/simplesamlphp-module-unixauth:dev-master
 ```
 
 Configuration

@@ -2,6 +2,7 @@
     "name": "bilbolodz/simplesamlphp-module-unixauth",
     "description": "The SimpleSAMLphp UnixAuth module provides method of authentication user against Unix server.",
     "type": "simplesamlphp-module",
+    "keywords": [ "unix", "ssh", "imap" ],
      "authors": [
         {
             "name": "Piotr Goczal",
