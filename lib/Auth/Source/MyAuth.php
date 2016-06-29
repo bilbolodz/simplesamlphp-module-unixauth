@@ -114,16 +114,19 @@ class sspmod_unixauth_Auth_Source_MyAuth extends sspmod_core_Auth_UserPassBase {
 	}
 	protected function login($username, $password) {
 		
+		//Does user enter email address insted of username?
+		if (filter_var($username, FILTER_VALIDATE_EMAIL)) {
+		$parts = explode('@', $username);
+		$username = $parts[0];    
+		}
+
 		// Defaults if there is no database entry
 		$email = $username . "@" . $this->mail_host;
-		$email_imap = "";
-		$name = $username;
-		$uid = $username;
+		$email_imap = "";				
+		$uid = "UID=" . $username . ",DC=" . $this->mail_host;
+		$name = "CN=" . $username . ",DC=" . $this->mail_host;
 		$authenticated = false;
-		
-		$uid = $username . "_" . $this->mail_host;
-		// $user_id = $username . "_" . $this->mail_host;
-		
+						
 		switch ($this->auth_mech) {
 			
 			case "imapd" :
